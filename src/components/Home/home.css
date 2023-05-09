@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.cardDetails{
+    display: flex;
+}
+.search{
+    padding: 1rem;
+    margin:5vh 40vh;
+    display: flex;
+    border-radius: 10px;
+    height: 4vh;
+    width: 125vh;
+    font-size: 1.5rem;
+    background-color: rgba(103, 16, 16, 0.317);
+    box-shadow: 2px 2px 20px black;
+}
+input{
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    height: 2rem;
+    width: 35v;
+    border: none;
+    background-color: rgba(245, 245, 245, 0.283);
+}

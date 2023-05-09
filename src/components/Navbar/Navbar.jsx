@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import { Link } from 'react-router-dom';
+import logo from './pngwing.com (1).png'
 function Navbar() {
   const [active, setActive] = useState('home');
 
@@ -11,9 +12,10 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link href="/" className="logo">
-          My Logo
+        <Link to="/" className="logo">
+      <img src={logo} height={75}/>
         </Link>
+       <h1>Book My Room</h1>
         <ul className="nav-menu">
           <li className={`nav-item ${active === 'home' ? 'active' : ''}`}>
             <Link id="home" to="/" onClick={handleClick}>
