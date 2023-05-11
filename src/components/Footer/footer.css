@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cont{
+    border: solid 1px black;
+    height: 20vh;
+    padding: 0.5rem;
+    display: flex;
+    background-color: rgb(9, 18, 54);
+    color: white;
+    position: relative;
+    z-index: 200;
+}
+.fst{
+    width: 20%;
+}
+.snd{
+    width: 40%;
+}
+.trd{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-top: 5vh;
+    width: 20%;
+}

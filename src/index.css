@@ -1,6 +1,13 @@
 body {
   margin: 0;
   background-image: linear-gradient(to right, rgb(96, 126, 177), rgb(23, 189, 211));
+  color:rgb(0, 0, 0)
 }
+
+/* body {
+  margin: 0;
+  background-image: linear-gradient(to right, rgb(6, 6, 6), rgb(0, 4, 5));
+  color:rgb(255, 255, 255)
+} */
 
 

@@ -1,28 +1,37 @@
-.main{
+.main1{
     display: flex;
     flex-direction: column;
 }
-.cardDetails{
+.cardDetails1{
     display: flex;
 }
-.search{
-    padding: 1rem;
+.search1{
+    padding: 0.5rem;
     margin:5vh 40vh;
     display: flex;
+    justify-content: space-around;
     border-radius: 10px;
-    height: 4vh;
-    width: 125vh;
-    font-size: 1.5rem;
-    background-color: rgba(103, 16, 16, 0.317);
+    height: 9vh;
+    width: 140vh;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.361);
     box-shadow: 2px 2px 20px black;
 }
 input{
     font-size: 1rem;
     border-radius: 5px;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
     height: 2rem;
-    width: 35v;
+    width: 30vh;
     border: none;
     background-color: rgba(245, 245, 245, 0.283);
 }
+.right1 {
+    margin-top: 35vh;
+    margin-right: 10vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  
+  

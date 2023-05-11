@@ -1,7 +1,7 @@
-.card{
+.card1{
     padding: 1.5rem;
-    box-shadow: 2px 2px 20px black;
-    margin: 5vh 15vh;
+    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    margin: 5vh 10vh;
     border-radius: 10px;
     display: flex;
     justify-content: left;
@@ -9,18 +9,19 @@
     transition: all 0.3s ease;
     max-width: 60vw;
     height: auto;
+    background-color: rgba(255, 255, 255, 0.406);
   }
   
-  .card:hover {
+  .card1:hover {
     transform: scale(1.05);
   }
   
-  .cardImg{
-    flex-shrink: 0;
+  .cardImg1{
     margin-right: 1.5rem;
+    border-radius: 10px;
   }
   
-  .content{
+  .content1{
     font-size: 1.5rem;
     font-family: 'Alkatra', cursive;
   }
@@ -40,7 +41,7 @@
     margin-bottom: 1rem;
   }
   
-  .btn{
+  .btn1{
     height: 50px;
     width: 100px;
     font-size: 1.2rem;
