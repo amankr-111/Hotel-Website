@@ -15,10 +15,10 @@ const Footer = () => {
             <p style={{color:"gray"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta, quo beatae voluptate, repudiandae rem velit, quod in odio laboriosam laudantium ab obcaecati! Magni ea deserunt similique debitis quos perspiciatis.</p>
         </div>
         <div className='trd' style={{fontSize:"2rem"}}>
-  <FontAwesomeIcon icon={faFacebook} />
-  <FontAwesomeIcon icon={faInstagram} />
-  <FontAwesomeIcon icon={faYoutube} />
-  <FontAwesomeIcon icon={faLinkedin} />
+  <FontAwesomeIcon icon={faFacebook} style={{cursor:"pointer"}} />
+  <FontAwesomeIcon icon={faInstagram} style={{cursor:"pointer"}}/>
+  <FontAwesomeIcon icon={faYoutube} style={{cursor:"pointer"}}/>
+  <FontAwesomeIcon icon={faLinkedin} style={{cursor:"pointer"}}/>
 </div>
 
       </div>

@@ -4,6 +4,7 @@ import "./home.css";
 import Card from "../cards/Card"
 import HomeRight from "./homeright/HomeRight"
 import Footer from '../Footer/Footer';
+import img3 from './four.jpg';
 const Home = () => {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -16,6 +17,13 @@ const Home = () => {
   };
   return (
     <div className='main1'>
+      <div className='slider'>
+          <img src={img3} height={"100%"} width={"100%"} style={{borderRadius: "10px"}}/>
+      </div>
+      <h1 className='head1'>Hey Buddy! Where are you going
+      <br/>
+      Today
+      </h1>
         <div className="search1">
           <label htmlFor="search">Search</label>
           <input type="text" />

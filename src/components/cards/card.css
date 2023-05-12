@@ -52,4 +52,14 @@
     box-shadow: 2px 2px 20px black;
     margin-top: 1rem;
   }
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottom h3{
+    position: relative;
+    top: 20%;
+    left: 30%;
+  }
   

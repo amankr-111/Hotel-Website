@@ -6,6 +6,7 @@ import  Navbar  from './components/Navbar/Navbar';
 import Login from './components/Login/Login';
 import Support from './components/Support/Support';
 import { Route, Routes } from 'react-router-dom';
+import Payment from './components/cards/Checkout/Payment/Payment';
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/support" element={<Support />} />
     </Routes>
+    {/* <Route path="/payment" element={<Payment />} /> */}
   </>
   );
 }

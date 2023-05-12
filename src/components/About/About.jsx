@@ -1,12 +1,34 @@
 import React from 'react'
-
+import './about.css'
+import Footer from "../Footer/Footer"
 const About = () => {
   return (
-  <div className="container">
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus adipisci cumque excepturi magni inventore nisi incidunt modi quos asperiores debitis! Commodi adipisci quibusdam amet consequatur obcaecati tempore minima assumenda, aliquid autem laborum voluptatibus. Deserunt enim corrupti harum excepturi? Voluptates quibusdam optio facilis deleniti dignissimos temporibus adipisci maiores provident hic deserunt sint ex aliquid accusantium architecto, earum nobis modi sit rerum voluptas? Nesciunt reiciendis possimus dolorum iure tempore excepturi mollitia, labore minima? Molestiae, fugit. Tenetur, fugit dicta? Aliquam odio aut, placeat animi velit similique quis quisquam dolores nobis iusto ipsum facilis quidem magni cum excepturi nostrum officia earum atque deserunt. Minima tempora quae, quia qui voluptatum obcaecati officia pariatur quas at soluta consequuntur corrupti nesciunt quasi tenetur voluptas perspiciatis deserunt voluptates sequi voluptatibus nisi eum culpa voluptatem? Eveniet facere voluptates, cupiditate voluptatibus maxime soluta ad libero temporibus. Sit, voluptates! Ea sint doloremque non quis magni blanditiis voluptas dicta hic molestias soluta voluptatum eius voluptatem eligendi aliquam, rem necessitatibus natus, illo quas debitis temporibus iure recusandae? Quos exercitationem inventore officia, maxime molestiae nobis fugit expedita iusto cumque laboriosam debitis nihil ducimus, consequatur qui illo aspernatur assumenda velit laborum possimus unde quae maiores distinctio? Dolores cupiditate natus dolorum obcaecati ullam vel quaerat asperiores harum nulla vero, mollitia saepe ea expedita. Assumenda perferendis repellat doloribus error provident ducimus voluptates, exercitationem illum, quasi, iure dolores eos iusto vitae voluptatibus? Provident, impedit sint eum, ad dolores optio dicta quibusdam corporis iste nihil iure amet accusamus accusantium eveniet labore. At, tempora ullam recusandae ut ipsam repellat nesciunt, fugit facilis, architecto commodi consequatur placeat repellendus distinctio asperiores harum magni neque beatae doloribus molestias voluptatem quaerat modi esse cum? Dolorum explicabo a repellat nisi perspiciatis. Sed voluptatibus natus odit illo tempore aliquid eos! Similique vitae ullam quod cupiditate at cumque nobis fugit iusto saepe tempore suscipit maxime, soluta est amet quo incidunt. Sapiente dolores necessitatibus, velit ex quo possimus animi iure dolorem et, quisquam aspernatur aperiam amet tempora autem mollitia asperiores numquam, harum modi nam. Earum natus quasi optio labore itaque saepe explicabo aperiam enim, dolorem expedita libero quis inventore alias, iure animi error iusto aliquid ad esse nemo sapiente voluptates nostrum cumque. Incidunt illo aperiam ipsam quod numquam dolorem eveniet sunt quas, vel voluptates qui ullam, repudiandae beatae dolores. Voluptas dolore, totam maiores architecto rerum modi, cumque ipsum voluptatum cum consectetur nam repellendus doloribus voluptatem. Ducimus ratione possimus in? Libero animi ratione eius temporibus autem nulla, rem numquam.
-    </p>
+<>
+<div className=" count">
+    <h1 className='h'>About Us </h1>
+   <div className='right'>
+        <p>
+        Welcome to our hotel booking website! We are a team of passionate professionals who are committed to providing you with the best hotel booking experience possible.
+    <br />
+    <br />
+Our website offers a wide range of hotels to choose from, with options for every budget and preference. From luxury resorts to budget-friendly accommodations, we have something for everyone. Our goal is to make it easy for you to find the perfect place to stay, whether you're traveling for business or pleasure.
+<br />
+<br />
+We understand that finding the right hotel can be a daunting task, which is why we have put together a team of experts to help you make informed decisions. Our team is available 24/7 to answer your questions and provide you with recommendations based on your needs and preferences.
+<br />
+<br />
+We pride ourselves on offering competitive prices and unbeatable deals. We work directly with hotels to negotiate the best rates possible, so you can be sure that you are getting the best value for your money.
+<br />
+<br />
+At our hotel booking website, we are committed to providing you with a hassle-free booking experience. Our website is user-friendly and easy to navigate, so you can quickly find the hotel you're looking for and book your stay in just a few clicks.
+<br />
+<br />
+Thank you for choosing our hotel booking website. We look forward to helping you find your perfect hotel and making your travel experience unforgettable.
+        </p>
+   </div>
   </div>
+  <Footer/>
+</>
   )
 }
 

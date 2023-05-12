@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Delicious+Handrawn&display=swap');
+
+.slider{
+    margin: 10px;
+    height: 80vh;
+    width: 98%;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 10px;
+    z-index: 99;
+    
+}
+.head1{
+    position: absolute;
+    top: 30vh;
+    left: 30vh;
+    font-weight: 700;
+    font-family: 'Alkatra', cursive;
+    z-index: 100;
+}
 .main1{
     display: flex;
     flex-direction: column;
@@ -14,24 +33,36 @@
     height: 9vh;
     width: 140vh;
     font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.361);
+    background-color: rgba(0, 0, 0, 0.648);
     box-shadow: 2px 2px 20px black;
+    position: absolute;
+    top: 70vh;
+    color: aliceblue;
+    z-index: 100;
 }
-input{
+.search1 input{
     font-size: 1rem;
     border-radius: 5px;
     height: 2rem;
     width: 30vh;
     border: none;
-    background-color: rgba(245, 245, 245, 0.283);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
 }
 .right1 {
-    margin-top: 35vh;
+    margin-top: 20vh;
     margin-right: 10vh;
     position: fixed;
-    top: 0;
+    top: 30px;
     right: 0;
     height: 100%;
+  }
+  .carousel-inner {
+    border-radius: 50px 10px 50px  10px;
+  }
+  
+  .carousel-item {
+    border-radius: 50px 10px 50px 10px;
   }
   
   

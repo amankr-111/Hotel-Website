@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import logo from './pngwing.com (1).png'
 import img1 from "./WhatsApp_Image_2023-05-11_at_12.19.57_PM-removebg-preview.png"
 function Navbar() {
@@ -11,7 +11,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar1">
+<>
+<nav className="navbar1">
       <div className="navbar-container1">
         <Link to="/" className="logo1">
       <img src={img1} height={75}/>
@@ -41,7 +42,7 @@ function Navbar() {
         </ul>
       </div>
     </nav>
-  
+</>
   
     );
 }

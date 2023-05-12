@@ -1,5 +1,94 @@
-.loginBox{
-    border: solid 2px black;
-height: 60vh;
-width: 50vh;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'popins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+   
+.fbox{
+    height: 90%;
+    width: 80%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(253, 253, 253, 0.45);
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px;
+}
+.fbox h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    text-shadow: 40%;
+
+}
+.inpf{
+    background-color: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+form p{
+    text-align: left;
+    font-size: 13px;
+}
+form p a{
+    text-decoration: none;
+    color: blue;
+}
+.btf{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btf button{
+    flex-basis: 48%;
+    background: blue;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    transition: backgroun 1s;
+
+}
+.inp{
+    height: 250px;
+}
+.btf button.disa{
+    background: #eaeaea;
+    color: black;
+}
+.click button{
+width: 150px;
+height: 40px;
+margin: 30px;
+border: 1px solid black;
+border-radius: 50px;
+background-color: rgb(17, 40, 17);
+color: rgb(255, 255, 255);
+
 }

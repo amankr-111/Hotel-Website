@@ -5,7 +5,7 @@ const HomeRight = () => {
   return (
     <div className='rightDiv'>
         <div className='img'>
-          <img src={img} height="70px" width="80px"/>
+          <img src={img} style={{boxShadow:'none'}} height="70px" width="80px"/>
           </div>
           <hr/>
           <div className="para">
