@@ -31,13 +31,10 @@ const Login = () => {
                     <div className="inpf" id="namfi">
                         <input type="text" required placeholder="name"/>
                     </div>
-
                     <div className="inpf">
                         <input type="email" required placeholder="Email"/>
                     </div>
-
                     <div className="inpf">
-                     
                         <input type="password" required placeholder="password"/>
                     </div>
                     <p>forget password <a href="http://instagram.com/vishnu_sparkles">click here?</a></p>
@@ -45,7 +42,6 @@ const Login = () => {
                 <div className="btf">
                     <button type="button" id="signupbt">Sign up</button>
                     <button type="button" id="signinbt" className="disa" >login</button>
-
                 </div>
                 <div className="click">
                     <button onClick={() => console.log("Clicked!")} className="click1">submit</button>

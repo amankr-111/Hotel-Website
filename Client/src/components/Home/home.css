@@ -25,7 +25,7 @@
     display: flex;
 }
 .search1{
-    padding: 0.5rem;
+    padding: 0.8rem;
     margin:5vh 40vh;
     display: flex;
     justify-content: space-around;
@@ -64,5 +64,10 @@
   .carousel-item {
     border-radius: 50px 10px 50px 10px;
   }
-  
+  .submit{
+    background-color: rgba(255, 255, 255, 0.441);
+        border: none;
+        border-radius: 20px;
+        width: 60px;
+  }
   

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Delicious+Handrawn&display=swap');
+.check{
+    height: 70vh;
+    width: 120vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(13, 29, 43);
+    color: white;
+    z-index: 1000;
+    box-shadow: 2px 2px 40px rgba(255, 255, 255, 0.45);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.over{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.541);
+    z-index: 1000;
+}
+.bttn{
+    position: absolute;
+    right: 0px;
+    margin-left: 95.5%;
+    height: 50px;
+    width: 40px;
+    background-color: rgba(150, 10, 10, 0.425);
+    border: none;
+    border-radius: 0 10px 0 20px;
+}
+
+.data{
+    display: flex;
+    justify-content: space-around;
+    font-family:  cursive;
+    padding: 1rem;
+}
+.rightCheck{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 51%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.left input{
+    background-color: rgba(253, 157, 13, 0.518);
+    width: 150px;
+}
+
+/* .left button{
+    position: absolute;
+    bottom: 50px;
+} */
+.dates {
+    background-color: rgba(255, 255, 255, 0.719);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: black;
+  }
+  
+  input[type="date"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+  }
+  
+.pay{
+    margin-top: 25vh;
+    margin-left: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.headCheck{
+    margin-left: 17vh;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: rgb(156, 156, 77);
+}
+.rooms{
+    margin-top: 4vh;
+margin-bottom: 7vh;
+height: 50px;
+width: 190px;
+background-color: rgba(224, 238, 166, 0.804);
+color: black;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 10px;
+border: none;
+}
+.add, .sub{
+    height: 100%;
+    width: 40px;
+    background-color: rgb(103, 103, 8);
+    border: none;
+    border-radius: 10px;
+
+}

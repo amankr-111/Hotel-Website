@@ -3,8 +3,15 @@ import img1 from "./room.jpg"
 import "./card.css"
 import Checkout from "./Checkout/Checkout";
 import { useState } from "react";
-const Card = () => {
+const Card = ({data,from, to}) => {
   const [isOpen , setIsOpen]=useState(false);
+
+  data={
+    name:data.name,
+    des:data.des,
+    loc:data.loc,
+    price:data.price
+  }
   
   return (
     <div className="card1" style={{ height: "40vh", width: "170vh" }}>
@@ -13,15 +20,15 @@ const Card = () => {
 </div>
 
       <div className="content1">
-        <h1 style={{fontFamily:"cursive"}}>Novotel Hotels</h1>
-        <h2> 2 BHK + Pool </h2>
-        <h3>Delhi, Noida</h3>
+        <h1 style={{fontFamily:"cursive"}}>{data.name}</h1>
+        <h2>{data.des}</h2>
+        <h3>{data.loc}</h3>
        <div className="bottom">
          <button className="btn1" onClick={()=>{setIsOpen(true)}}>Book Now</button>
-            <h3>18000 -/</h3>
+            <h3>{`${data.price} -/`}</h3>
        </div>
       </div>
-      <Checkout  open={isOpen} onClose={() => setIsOpen(false)}/>
+      <Checkout from={from} to={to} data={data} open={isOpen} onClose={() => setIsOpen(false)}/>
     </div>
   );
 };
