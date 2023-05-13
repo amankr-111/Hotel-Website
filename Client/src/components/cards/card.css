@@ -56,10 +56,6 @@
     display: flex;
     justify-content: space-between;
   }
-
-  .bottom h3{
-    position: relative;
-    top: 20%;
-    left: 30%;
+  .cost{
+    margin-left: 25vh;
   }
-  

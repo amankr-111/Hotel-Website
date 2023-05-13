@@ -13,16 +13,16 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   const [isHovering, setIsHovering] = useState(false);
+  const [hoveredData, setHoveredData] = useState(null);
 
-  const handleMouseOver = () => {
-    setIsHovering(true);
+  const handleMouseOver = (event) => {
+    setIsHovering(true);  
   };
 
   const handleMouseLeave = () => {
     setIsHovering(false);
+
   };
-    // let from= document.getElementById('from').value;
-    // let to= document.getElementById('to').value;
   return (
     <div className='main1'>
       <div className='slider'>
@@ -47,11 +47,11 @@ const Home = () => {
         >
           {Object.values(data).map((hotel, index) => (
             <Card key={index} data={hotel} />
-          ))}
+            ))}
         </div>
         <div className="right1">
-          {isHovering ? <HomeRight/> : ""} 
-        </div>
+          {isHovering && <HomeRight />}
+          </div>
       </div>
       <Footer/>
     </div>

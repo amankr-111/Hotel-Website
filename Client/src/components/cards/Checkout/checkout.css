@@ -96,7 +96,7 @@
     font-weight: 500;
     color: rgb(156, 156, 77);
 }
-.rooms{
+/* .rooms{
     margin-top: 4vh;
 margin-bottom: 7vh;
 height: 50px;
@@ -116,4 +116,38 @@ border: none;
     border: none;
     border-radius: 10px;
 
-}
+} */
+.rooms {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  .sub, .add {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ffffff68;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sub:hover, .add:hover {
+    background-color: #eee;
+  }
+  
+  .dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .sub.disabled, .add.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  

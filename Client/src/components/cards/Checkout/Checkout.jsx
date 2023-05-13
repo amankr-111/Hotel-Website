@@ -2,11 +2,13 @@ import ReactDOM from "react-dom";
 import React from "react";
 import "./checkout.css";
 import { useState } from "react";
-import img1 from './checkout.jpg'
-import Payment from "./Payment/Payment";
-const Checkout = ({data, onClose, open, from, to}) => {
-  const [roomCount, setRoomCount] = useState(1);
+import { Link } from "react-router-dom";
 
+
+
+
+const Checkout = ({data, onClose, open}) => {
+  const [roomCount, setRoomCount] = useState(1);
   function handleAddRoom() {
     setRoomCount(roomCount + 1);
   }
@@ -16,6 +18,7 @@ const Checkout = ({data, onClose, open, from, to}) => {
       setRoomCount(roomCount - 1);
     }
   }
+
   if (!open) return null; 
   return ReactDOM.createPortal(
     <>
@@ -37,7 +40,17 @@ const Checkout = ({data, onClose, open, from, to}) => {
       <div className="dis">{roomCount}</div>
       <button className="add" onClick={handleAddRoom}>+</button>
     </div>
-          <button type="button" class="btn btn-outline-warning">Continue</button>
+    <Link to={{
+  pathname: '/payment',
+  state:{
+    data:{
+      name:data.name,
+      work: "developer"
+    }
+  }
+}} target="/payment">
+    <button type="button" class="btn btn-outline-warning">Continue</button>
+    </Link>
       </div>
       <div className="rightCheck">
       <div className="dates">
