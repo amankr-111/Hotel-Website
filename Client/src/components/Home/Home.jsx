@@ -5,10 +5,9 @@ import Card from "../cards/Card"
 import HomeRight from "./homeright/HomeRight"
 import Footer from '../Footer/Footer';
 import img3 from './four.jpg';
-import data from '../data';
+import data from '../Data/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 
 
 const Home = () => {

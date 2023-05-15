@@ -1,16 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Payment.css";
 import card1 from "./cards.jpeg"
 import card2 from "./lock.png"
 
-function PaymentForm() {
-  const [totalAmount, setTotalAmount] = useState(0);
+function Payment({}) {
 
-  function handleTotalChange(event) {
-    const value = event.target.value;
-    const tot_price = value * 100;
-    setTotalAmount(tot_price);
+  const nagivate= useNavigate();
+
+  const callPaymentPage= async()=>{
+    try{
+      const res= await fetch("/payment",{
+        method:"GET",
+        headers:{
+              Accepts: "application/json",
+              "Content-Type": "application/json"
+        },
+        credentials:"include"
+      })
+
+      const data= await res.json()
+      console.log(data)
+      if(!res.status === 200)
+      {
+        const error= new Error(res.error)
+        throw error
+      }
+    
+    }catch(e){
+      console.log(e)
+      nagivate("/login")
+    }
   }
+
+    useEffect(()=>{
+       callPaymentPage();
+    },[])
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,7 +46,7 @@ function PaymentForm() {
     <header>
       <div className="container1">
         <div className="pay1">
-          <form onSubmit={handleSubmit}>
+          <form method="GET" onSubmit={handleSubmit}>
             <h3 className="head" style={{font:"3rem curcive 1000"}}>Payments</h3>
             <label className="labe1">
               Accepted card
@@ -56,5 +81,4 @@ function PaymentForm() {
     </header>
   );
 }
-
-export default PaymentForm;
+export default Payment;

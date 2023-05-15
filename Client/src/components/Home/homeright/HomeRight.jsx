@@ -3,7 +3,6 @@ import './righthome.css';
 import img from "./tick.png";
 
 const HomeRight = () => {
-  console.log()
   return (
     <div className='rightDiv'>
         <div className='img'>

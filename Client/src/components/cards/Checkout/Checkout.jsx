@@ -4,12 +4,10 @@ import "./checkout.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 const Checkout = ({data, onClose, open}) => {
   const [roomCount, setRoomCount] = useState(1);
   function handleAddRoom() {
+    if(roomCount < data.room)
     setRoomCount(roomCount + 1);
   }
 
@@ -18,7 +16,7 @@ const Checkout = ({data, onClose, open}) => {
       setRoomCount(roomCount - 1);
     }
   }
-
+ 
   if (!open) return null; 
   return ReactDOM.createPortal(
     <>
@@ -42,14 +40,9 @@ const Checkout = ({data, onClose, open}) => {
     </div>
     <Link to={{
   pathname: '/payment',
-  state:{
-    data:{
-      name:data.name,
-      work: "developer"
-    }
-  }
-}} target="/payment">
-    <button type="button" class="btn btn-outline-warning">Continue</button>
+  state: { data: data, roomCount: roomCount }
+}} >
+    <button type="button" onClick={onClose} class="btn btn-outline-warning">Continue</button>
     </Link>
       </div>
       <div className="rightCheck">

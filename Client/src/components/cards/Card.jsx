@@ -2,22 +2,26 @@ import React from "react";
 import img1 from "./room.jpg"
 import "./card.css"
 import Checkout from "./Checkout/Checkout";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import ShowImg from "./ShowImg/ShowImg";
 
-
-const Card = ({data,from, to}) => {
+const Card = ({data}) => {
   const [isOpen , setIsOpen]=useState(false);
-  data={
-    name:data.name,
-    des:data.des,
-    loc:data.loc,
-    price:data.price
-  }
+  const [imgIsOpen , setImgIsOpen]=useState(false);
+  const cardData = {
+    name: data.name,
+    des: data.des,
+    loc: data.loc,
+    price: data.price,
+    room:data.rooms
+  };
   return (
     <div className="card1" style={{ height: "40vh", width: "170vh" }}>
-      <div className="cardImg1" >
-  <img  src={img1} height="200" style={{maxWidth:"300px", borderRadius:"10px"}} className="d-block w-100" alt="..."/>
+      <div  className="cardImg1" >
+      {Object.values(data).map((hotel, index) => (
+        <ShowImg key={index} data={hotel} />
+        ))}
+        <img  onClick={()=>{setImgIsOpen(true)}} src={img1} height="200" style={{maxWidth:"300px", borderRadius:"10px", cursor:"pointer"}} className="d-block w-100" alt="..."/>
 </div>
 
       <div className="content1">
@@ -33,9 +37,11 @@ const Card = ({data,from, to}) => {
             </div>
        </div>
       </div>
-      <Checkout from={from} to={to} data={data} open={isOpen} onClose={() => setIsOpen(false)}/>
+      <Checkout data={cardData} open={isOpen} onClose={() => setIsOpen(false)}/>
+      <ShowImg data={cardData} openy={imgIsOpen} onClose={() => setImgIsOpen(false)}/>
     </div>
   );
 };
 
 export default Card;
+

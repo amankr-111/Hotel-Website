@@ -67,6 +67,10 @@
       border: 2px solid #3e3c3c;
       border-radius: 5px;
    }
+   .logo1:not(.active) {
+    text-decoration: none;
+  }
+  
 
   /* Media queries for responsive styles */
   @media screen and (max-width: 768px) {
@@ -108,5 +112,5 @@
     }
   }
 
-  
-   
+
+

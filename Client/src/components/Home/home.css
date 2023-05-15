@@ -57,13 +57,7 @@
     right: 0;
     height: 100%;
   }
-  .carousel-inner {
-    border-radius: 50px 10px 50px  10px;
-  }
-  
-  .carousel-item {
-    border-radius: 50px 10px 50px 10px;
-  }
+
   .submit{
     background-color: rgba(255, 255, 255, 0.441);
         border: none;
