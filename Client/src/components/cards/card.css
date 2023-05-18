@@ -1,6 +1,6 @@
 .card1{
     padding: 1.5rem;
-    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    box-shadow: 2px 2px 20px;
     margin: 5vh 10vh;
     border-radius: 10px;
     display: flex;
@@ -59,3 +59,14 @@
   .cost{
     margin-left: 25vh;
   }
+.dataDec{
+  position: absolute;
+  top: 85%;
+}
+.boxImg1{
+  box-shadow:2px 2px 20px;
+  transition: all 0.3s ease;
+}
+.boxImg1:hover {
+  transform: scale(1.05);
+}

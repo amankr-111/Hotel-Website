@@ -4,7 +4,7 @@ import "./Payment.css";
 import card1 from "./cards.jpeg"
 import card2 from "./lock.png"
 
-function Payment({}) {
+function Payment() {
 
   const nagivate= useNavigate();
 
@@ -13,7 +13,7 @@ function Payment({}) {
       const res= await fetch("/payment",{
         method:"GET",
         headers:{
-              Accepts: "application/json",
+              Accept: "application/json",
               "Content-Type": "application/json"
         },
         credentials:"include"
@@ -26,10 +26,11 @@ function Payment({}) {
         const error= new Error(res.error)
         throw error
       }
-    
-    }catch(e){
-      console.log(e)
-      nagivate("/login")
+
+    }catch(error){
+      console.log(error)
+      // nagivate('/login')
+      console.log("we are facing some error")
     }
   }
 
@@ -41,7 +42,7 @@ function Payment({}) {
     event.preventDefault();
     alert("Your payment was successful");
   }
-
+ 
   return (
     <header>
       <div className="container1">
@@ -63,7 +64,7 @@ function Payment({}) {
             </label>
             <label className="labe2">
               Total Amount
-              <div className="amou">100</div>
+              <div className="amou">{100}</div>
             </label>
           </div>
             
@@ -72,6 +73,7 @@ function Payment({}) {
                 src={card2}
                 height="20px"
                 alt="Lock icon"
+                onSubmit={handleSubmit}
               />
               Pay Now
             </button>

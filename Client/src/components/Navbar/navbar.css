@@ -71,7 +71,17 @@
     text-decoration: none;
   }
   
-
+  .togle{
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease;
+  }
+  .togle:hover {
+    transform: scale(1.75);
+  }
   /* Media queries for responsive styles */
   @media screen and (max-width: 768px) {
     .navbar-container1 {

@@ -3,13 +3,37 @@ const bcrypt=require('bcryptjs')
 const router = express.Router()
 const jwt =require('jsonwebtoken')
 const cookieParser = require('cookie-parser');
-const authondicate=require("../middlewere/authondicate")
+const authondicate = require("../middlewere/authondicate")
 
 require("../db/conn")
 const User = require("../model/userSchema")
+const roomsInfo = require("../model/roomsInfo")
 router.get('/', (req, res) => {
     res.send("hello World from server router js")
 })
+
+    // data Dashboard
+
+    router.post('/adminDash', async (req, res) => { // Changed from GET to POST for sending data in the request body
+        const { hname, dec, price } = req.body;
+      
+        if (!hname || !dec || !price) {
+          return res.status(422).json({ error: "Please fill the details properly" });
+        }
+      
+        try {
+          const room = new roomsInfo({ hname, dec, price });
+          const roomRegister = await room.save();
+          console.log(room + "successfully registered");
+          res.status(200).json({ message: "Room registered successfully" });
+      
+        } catch (err) {
+          console.log(err);
+        }
+      });
+    
+
+        // signUp page
 
 router.post("/login", async (req, res) => {
     const { name, email, password } = req.body
@@ -28,14 +52,14 @@ router.post("/login", async (req, res) => {
 
        const userRegister= await user.save()
         console.log(user+"succesfully register")
-        console.log(userRegister)
+        // console.log(userRegister)
         res.status(200).json({ message: "User register succesfully Success" })
 
     } catch (err) {
         console.log(err)
     }
 })
-// Lgoin route
+            // Lgoin route
 
 router.post('/loginme', async (req, res)=>{
     try{
@@ -51,8 +75,9 @@ router.post('/loginme', async (req, res)=>{
             token = await userLogin.generateAuthToken();
             console.log(token)
             
-            res.cookie("jwToken", token, {
+            res.cookie("cootoken", token, {
                 expires: new Date(Date.now()+25892000000),
+
                 httpOnly: true
             })
 
@@ -70,7 +95,7 @@ router.post('/loginme', async (req, res)=>{
     }
 })
 
-// payment ki kahani
+// payment ki kahani 
 
   router.get('/payment',authondicate, (req, res) => {
         res.send("we are at payment")

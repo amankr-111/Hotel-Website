@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import About from './components/About/About';
 import Home from './components/Home/Home';
@@ -9,11 +9,17 @@ import { Route, Routes , useLocation} from 'react-router-dom';
 import Payment from './components/Payment/Payment';
 import Error from './components/Error/Error';
 import Login1 from './components/Login/Login1';
+import Portel from './components/portel/Portel';
 function App() {
   const location = useLocation();
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
   return (
-    <>
-    {location.pathname !== '/payment' &&  <Navbar />}
+    <div className={`App ${theme}`}>
+    {location.pathname !== '/payment' &&  <Navbar toggleTheme={toggleTheme} />}
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -21,9 +27,10 @@ function App() {
       <Route path='/loginme' element={<Login1/>}/>
       <Route path="/support" element={<Support />} />
       <Route path='/payment' element={<Payment/>} />
+      <Route path='/portel' element={<Portel/>} />
       <Route path='*' element={<Error/>}/>
     </Routes>
-  </>
+  </div>
   );
 }
 

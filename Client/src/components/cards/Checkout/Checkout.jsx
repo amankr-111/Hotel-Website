@@ -40,10 +40,11 @@ const Checkout = ({data, onClose, open}) => {
     </div>
     <Link to={{
   pathname: '/payment',
-  state: { data: data, roomCount: roomCount }
+  state: { dataCard: data, roomCount: roomCount }
 }} >
-    <button type="button" onClick={onClose} class="btn btn-outline-warning">Continue</button>
-    </Link>
+  <button type="button" onClick={onClose} class="btn btn-outline-warning">Continue</button>
+</Link>
+
       </div>
       <div className="rightCheck">
       <div className="dates">

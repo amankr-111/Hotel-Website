@@ -1,5 +1,4 @@
 import React from "react";
-import img1 from "./room.jpg"
 import "./card.css"
 import Checkout from "./Checkout/Checkout";
 import { useState } from "react";
@@ -13,7 +12,8 @@ const Card = ({data}) => {
     des: data.des,
     loc: data.loc,
     price: data.price,
-    room:data.rooms
+    room:data.rooms,
+    roomImg:data.roomImg
   };
   return (
     <div className="card1" style={{ height: "40vh", width: "170vh" }}>
@@ -21,7 +21,7 @@ const Card = ({data}) => {
       {Object.values(data).map((hotel, index) => (
         <ShowImg key={index} data={hotel} />
         ))}
-        <img  onClick={()=>{setImgIsOpen(true)}} src={img1} height="200" style={{maxWidth:"300px", borderRadius:"10px", cursor:"pointer"}} className="d-block w-100" alt="..."/>
+        <img className='boxImg1' onClick={()=>{setImgIsOpen(true)}} src={data.roomImg} height="200" style={{maxWidth:"300px", borderRadius:"10px", cursor:"pointer"}}  alt="..."/>
 </div>
 
       <div className="content1">
@@ -30,6 +30,7 @@ const Card = ({data}) => {
         <h3>{data.loc}</h3>
        <div className="bottom">
    <button className="btn1"onClick={()=>{setIsOpen(true)}} >Book Now</button>
+        <h4 className="dataDec">{data.dec}</h4>
 
             <div className="cost">
               <h4 style={{fontWeight:"700"}}>Per Night</h4>

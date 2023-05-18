@@ -1,1 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Delicious+Handrawn&display=swap');
+
+.App {
+    background-image: linear-gradient(to right, rgb(37, 78, 150), rgb(23, 189, 211));
+  color:rgb(0, 0, 0)
+  }
+  
+  .App.dark {
+    background-image: linear-gradient(to right, rgb(35, 27, 27), rgb(11, 11, 44));
+  color:rgb(252, 252, 252)
+  }
+  

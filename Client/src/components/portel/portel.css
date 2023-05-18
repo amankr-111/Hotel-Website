@@ -1,0 +1,32 @@
+.box{
+    margin: 10vh 45vh;
+    height: 70vh;
+    width: 120vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.386);
+
+}
+.portelBtn{
+    margin-bottom: 100px;
+    height: 80px;
+    width: 100px;
+    font-size: 2rem;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.portelBtn:hover {
+    transform: scale(1.75);
+}
+.index{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

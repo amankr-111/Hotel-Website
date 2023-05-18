@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from './pngwing.com (1).png';
-import img1 from "./WhatsApp_Image_2023-05-11_at_12.19.57_PM-removebg-preview.png";
+import img1 from "./logo.png";
+import moon from "./moon.png";
+import sun from "./sun.png";
 import './navbar.css';
 
-function Navbar() {
+function Navbar(props) {
   const [active, setActive] = useState('home');
+
+  const [mode, setMode]=useState(sun)
+
+  const handlechange = () => {
+    props.toggleTheme();
+    if(mode===moon)
+    {setMode(sun)}
+    else{setMode(moon)}
+  };
 
   const handleClick = (e) => {
     setActive(e.target.id);
@@ -15,10 +25,15 @@ function Navbar() {
     <nav className="navbar1">
       <div className="navbar-container1">
         <NavLink to="/" className="logo1" activeClassName="">
-          <img src={img1} height={75} alt="Book My Room logo" />
+          <img src={img1} height={70} alt="Book My Room logo" />
         </NavLink>
-        <h1>Book My Room</h1>
+        <h1>Blue Ocean</h1>
         <ul className="nav-menu1">
+          <li>
+            <button className='togle' onClick={handlechange}>
+              <img src={mode} height={50}/>
+            </button>
+          </li>
           <li className={`nav-item1`}>
             <NavLink
               to="/"
@@ -54,7 +69,7 @@ function Navbar() {
           </li>
           <li className={`nav-item1`}>
             <NavLink
-              to="/login"
+              to="/portel"
               id="login"
               onClick={handleClick}
               activeClassName="active"

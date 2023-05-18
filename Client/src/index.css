@@ -1,13 +1,4 @@
-body {
-  margin: 0;
-  background-image: linear-gradient(to right, rgb(96, 126, 177), rgb(23, 189, 211));
+body{
+    background-image: linear-gradient(to right, rgb(37, 78, 150), rgb(23, 189, 211));
   color:rgb(0, 0, 0)
-}
-/* 
-body {
-  margin: 0;
-  background-image: linear-gradient(to right, rgb(35, 27, 27), rgb(11, 11, 44));
-  color:rgb(255, 255, 255)
-} */
-
-
+  }
