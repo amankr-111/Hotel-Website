@@ -9,7 +9,7 @@ const Portel = () => {
             <h1 style={{fontSize:"3rem", fontWeight:1000}}>Who are you</h1>
       <div className='index'>
       <div className='portelBtn'style={{marginRight:"100px"}}>
-        <Link to="/loginme">
+        <Link to="/adminLogin">
         <img src={admin} height={100} width={100}/>
  <button style={{backgroundColor:"transparent",border:"none"}} className=' admin'>Admin</button>
 </Link>

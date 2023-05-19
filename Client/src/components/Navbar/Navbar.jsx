@@ -27,7 +27,7 @@ function Navbar(props) {
         <NavLink to="/" className="logo1" activeClassName="">
           <img src={img1} height={70} alt="Book My Room logo" />
         </NavLink>
-        <h1>Blue Ocean</h1>
+        <h1 style={{fontWeight:"900"}}>Book My Room</h1>
         <ul className="nav-menu1">
           <li>
             <button className='togle' onClick={handlechange}>

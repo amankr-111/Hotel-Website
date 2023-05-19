@@ -12,17 +12,17 @@ router.get('/', (req, res) => {
     res.send("hello World from server router js")
 })
 
-    // data Dashboard
+    // Admin Dashboard
 
-    router.post('/adminDash', async (req, res) => { // Changed from GET to POST for sending data in the request body
-        const { hname, dec, price } = req.body;
+    router.post('/admindashboard', async (req, res) => { 
+        const { hname, dec, loc, price } = req.body;
       
-        if (!hname || !dec || !price) {
+        if (!hname || !dec || !loc ||!price) {
           return res.status(422).json({ error: "Please fill the details properly" });
         }
       
         try {
-          const room = new roomsInfo({ hname, dec, price });
+          const room = new roomsInfo({ hname, dec, loc, price });
           const roomRegister = await room.save();
           console.log(room + "successfully registered");
           res.status(200).json({ message: "Room registered successfully" });
@@ -32,7 +32,6 @@ router.get('/', (req, res) => {
         }
       });
     
-
         // signUp page
 
 router.post("/login", async (req, res) => {

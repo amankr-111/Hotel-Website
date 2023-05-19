@@ -4,82 +4,82 @@ import room3 from "./img3.jpg";
 import room4 from "./room.jpg";
 let data={
         first:{
-            name:"Deluxe Room",
+            name:"Novotel",
             price:3000,
-            loc:"AC + pool",
-            dec:"The best Services",
+            loc:"Kolkata",
+            dec:"Pool, Sona, AC",
             rooms: 5,
             roomImg:room1
         },
         second:{
-            name:"Deluxe Room",
-            price:4000,
-            loc:"sona + pool + AC",
-            dec:"The best Services",
-            rooms: 5,
-            roomImg:room2
-        },
-        third:{
-            name:"Deluxe Room",
+            name:"Turipati",
             price:2300,
-            loc:"sona + pool",
-            dec:"The best Services",
+            loc:"Delhi",
+            dec:"Bar, Pool, AC",
             rooms: 3,
             roomImg:room3
         },
+            third:{
+            name:"JW Marriott",
+            price:4000,
+            loc:"Kolkata",
+            dec:"Resturent, Bar, AC",
+            rooms: 5,
+            roomImg:room2
+        },
         forth:{
-            name:"Super Deluxe Room",
+            name:"Blue Ocean",
             price:30000,
-            loc:"sona + pool + Bar",
-            dec:"The best Services",
+            loc:"Delhi",
+            dec:"AC, Sea facing, Bar",
             rooms: 3,
             roomImg:room4
         },
         fifth:{
-            name:"Super Deluxe Room",
+            name:"The Taj",
             price:20000,
-            loc:"sona + Dool + Bar",
-            dec:"The best Services",
+            loc:"Mumbai",
+            dec:"Pool",
             rooms: 3,
             roomImg:room2
         },
         sexth:{
-            name:"Super Deluxe Room",
+            name:"7 Kings",
             price:25000,
-            loc:"sona + pool + Bar",
-            dec:"The best Services",
+            loc:"Pune",
+            dec:"Resturent & Bar",
             rooms: 3,
             roomImg:room1
         },
         seventh:{
-            name:"Non Duplex Room",
+            name:"Royal Queen",
             price:3000,
-            loc:"Pool",
-            dec:"The best Services ",
+            loc:"Delhi",
+            dec:"AC, Bar, QueenBed",
             rooms: 2,
             roomImg:room3
         },
         earth:{
-            name:"Non Duplex Room",
+            name:"Sea side",
             price:3000,
-            loc:"Pool",
-            dec:"The best Services ",
+            loc:"Mumbai",
+            dec:"Sea View, Bar, NightLight",
             rooms: 2,
             roomImg:room4
         },
         ninth:{
-            name:"Non Duplex Room",
+            name:"Shahi Darbaar",
             price:3000,
-            loc:"Pool",
-            dec:"The best Services ",
+            loc:"Pune",
+            dec:"Ac, Pool",
             rooms: 2,
             roomImg:room1
         },
         tenth:{
-            name:"Non Duplex Room",
+            name:"OYO",
             price:3000,
-            loc:"Pool",
-            dec:"The best Services ",
+            loc:"Kolkata",
+            dec:"Resturent, Ac",
             rooms: 2,
             roomImg:room4
         }

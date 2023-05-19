@@ -10,6 +10,8 @@ import Payment from './components/Payment/Payment';
 import Error from './components/Error/Error';
 import Login1 from './components/Login/Login1';
 import Portel from './components/portel/Portel';
+import Admin1 from './components/Admin1/Admin1';
+import AdminDashBoard from './components/Admin1/AdminDashBoard/AdminDashBoard';
 function App() {
   const location = useLocation();
   const [theme, setTheme] = useState('light');
@@ -28,7 +30,10 @@ function App() {
       <Route path="/support" element={<Support />} />
       <Route path='/payment' element={<Payment/>} />
       <Route path='/portel' element={<Portel/>} />
+      <Route path='/adminLogin' element={<Admin1/>} />
+      <Route path='/adminDashBoard' element={<AdminDashBoard/>} />
       <Route path='*' element={<Error/>}/>
+      
     </Routes>
   </div>
   );

@@ -4,7 +4,7 @@ import Checkout from "./Checkout/Checkout";
 import { useState } from "react";
 import ShowImg from "./ShowImg/ShowImg";
 
-const Card = ({data}) => {
+const Card = ({from, to, data}) => {
   const [isOpen , setIsOpen]=useState(false);
   const [imgIsOpen , setImgIsOpen]=useState(false);
   const cardData = {
@@ -38,7 +38,7 @@ const Card = ({data}) => {
             </div>
        </div>
       </div>
-      <Checkout data={cardData} open={isOpen} onClose={() => setIsOpen(false)}/>
+      <Checkout from={from} to={to} data={cardData} open={isOpen} onClose={() => setIsOpen(false)}/>
       <ShowImg data={cardData} openy={imgIsOpen} onClose={() => setImgIsOpen(false)}/>
     </div>
   );

@@ -36,7 +36,7 @@ const Login = () => {
       else{
         window.alert("registration successful")
         console.log("registration suq")
-        Navigate('/login');
+        Navigate('/loginme');
       }
   }
   return (

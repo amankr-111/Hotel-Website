@@ -11,6 +11,10 @@ const roomsInfo= new mongoose.Schema({
         type:String,
         required:true,
     },
+    loc:{
+        type:String,
+        required:true,
+    },
     price:{
         type:String,
         required:true,

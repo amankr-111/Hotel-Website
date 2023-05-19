@@ -4,7 +4,7 @@ import "./checkout.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Checkout = ({data, onClose, open}) => {
+const Checkout = ({from, to ,data, onClose, open}) => {
   const [roomCount, setRoomCount] = useState(1);
   function handleAddRoom() {
     if(roomCount < data.room)
@@ -48,10 +48,10 @@ const Checkout = ({data, onClose, open}) => {
       </div>
       <div className="rightCheck">
       <div className="dates">
-        <label htmlFor="fromDate" id='from'>From</label>
-        <input type="date" />
-        <label htmlFor="toDdate" id='to'>To</label>
-        <input type="date" />
+        <label htmlFor="fromDate" id='from'>To</label>
+        <input type="date" value={from} />
+        <label htmlFor="toDdate" id='to'>Form</label>
+        <input type="date" value={to} />
       </div>
       <div className="pay">
       <h3 style={{fontSize:"2rem", color:"red"}}>Total Ammount</h3>
