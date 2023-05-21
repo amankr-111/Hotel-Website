@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import "./home.css";
 import Card from "../cards/Card"
@@ -8,13 +8,25 @@ import img3 from './four.jpg';
 import data from '../Data/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios'
 
 
 const Home = () => {
   const [isHovering, setIsHovering] = useState(false);
-  const [hoveredData, setHoveredData] = useState(null);
+  const [cardData, setCardData] = useState("");
   const [to, setTo]=useState('')
   const [from, setFrom]=useState('')
+
+
+  // fetaching the data  from the dataBase
+
+  useEffect(()=>{
+    const fetachData= async()=>{
+      const data = await axios.get("/admindashboard")
+      console.log(data)
+    }
+    fetachData()
+  },[])
   
   const handleMouseOver = (event) => {
     setIsHovering(true);  
@@ -61,6 +73,11 @@ const Home = () => {
           {Object.values(data).map((hotel, index) => (
             <Card from={from} to={to} key={index} data={hotel} />
             ))}
+            {/* {
+                cardData && cardData.data.map((cardData)=>{
+                  <Card from={from} to={to}data={cardData} />
+                })
+            } */}
         </div>
         <div className="right1">
           {isHovering && <HomeRight />}

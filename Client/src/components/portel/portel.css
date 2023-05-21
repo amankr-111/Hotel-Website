@@ -23,7 +23,7 @@
 }
 
 .portelBtn:hover {
-    transform: scale(1.75);
+    transform: scale(1.5);
 }
 .index{
     display: flex;

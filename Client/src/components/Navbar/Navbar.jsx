@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import img1 from "./logo.png";
+import img1 from "./LOGO.png";
 import moon from "./moon.png";
 import sun from "./sun.png";
 import './navbar.css';
@@ -25,7 +25,7 @@ function Navbar(props) {
     <nav className="navbar1">
       <div className="navbar-container1">
         <NavLink to="/" className="logo1" activeClassName="">
-          <img src={img1} height={70} alt="Book My Room logo" />
+          <img src={img1} height={80} alt="Book My Room logo" />
         </NavLink>
         <h1 style={{fontWeight:"900"}}>Book My Room</h1>
         <ul className="nav-menu1">

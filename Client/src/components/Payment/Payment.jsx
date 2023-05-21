@@ -6,6 +6,8 @@ import card2 from "./lock.png"
 
 function Payment() {
 
+
+  
   const nagivate= useNavigate();
 
   const callPaymentPage= async()=>{
@@ -20,7 +22,7 @@ function Payment() {
       })
 
       const data= await res.json()
-      console.log(data)
+      console.log("I am the second Cookie")
       if(!res.status === 200)
       {
         const error= new Error(res.error)
@@ -29,7 +31,7 @@ function Payment() {
 
     }catch(error){
       console.log(error)
-      // nagivate('/login')
+      nagivate('/login')
       console.log("we are facing some error")
     }
   }
@@ -57,17 +59,6 @@ function Payment() {
             <input className="cardDetails" type="text" placeholder="Card Number*" />
             <input className="cardDetails" type="text" placeholder="Expiry Date*" />
             <input className="cardDetails" type="text" placeholder="Security Code*" />
-          <div className="bottomPay">
-          <label className="roomslab">
-              No. Of Rooms
-              <div className="room">1</div>
-            </label>
-            <label className="labe2">
-              Total Amount
-              <div className="amou">{100}</div>
-            </label>
-          </div>
-            
             <button type="submit">
               <img
                 src={card2}
