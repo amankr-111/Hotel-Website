@@ -1,13 +1,13 @@
-const mongoose = require('mongooose')
+const mongoose = require('mongoose')
 
 
 const feedback= new mongoose.Schema({
 
-    fName:{
+    fname:{
         type:String,
         required:true,
     },
-    lName:{
+    lname:{
         type:String,
         required:true,
     },
@@ -16,5 +16,5 @@ const feedback= new mongoose.Schema({
         required:true,
     }
 })
-const Support = mongoose.model("FEEDBACK", roomsInfo)
-module.exports = Support
+const feedback1 = mongoose.model("FEEDBACK", feedback)
+module.exports = feedback1

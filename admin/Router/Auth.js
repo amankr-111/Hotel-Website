@@ -4,10 +4,13 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const authondicate = require('../middlewere/authondicate');
+const mongoose = require('mongoose');
+
 
 require('../db/conn');
 const User = require('../model/userSchema');
 const roomsInfo = require('../model/roomsInfo');
+const feedback= require('../model/feedBack')
 
 router.use(cookieParser());
 
@@ -33,10 +36,9 @@ router.post('/admindashboard', async (req, res) => {
     res.status(500).send(err);
   }
 });
-
+        // sending the data to the dataBase
 router.get('/admindashboard', (req, res) => {
-  roomsInfo
-    .find()
+  roomsInfo.find()
     .then((data) => {
       res.status(200).send(data);
     })
@@ -45,7 +47,7 @@ router.get('/admindashboard', (req, res) => {
     });
 });
 
-// signUp page
+            // signUp page
 router.post('/login', async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -71,7 +73,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Login route
+        // Login route
 router.post('/loginme', async (req, res) => {
   try {
     let token;
@@ -104,13 +106,25 @@ router.post('/loginme', async (req, res) => {
     res.status(500).send(err);
   }
 });
-
-// Sending feedback to the database
-// render.post('/support',(res, req)=>{ ... });
-
-// Payment route
+// payment Ki kahani
 router.get('/payment', authondicate, (req, res) => {
   res.send(req.rootUser);
 });
+
+// creating support database
+    router.get('/support', async (req, res) => {
+  const { fname, lname, comment } = req.body;
+  if (!fname || !lname || !comment) {
+    return res.status(500).json({ message: 'Please fill the form' });
+  }
+  try {
+    const feedRoom = new feedback({ fname, lname, comment});
+    await feedRoom.save();
+    res.status(200).json({ message: 'Feedback submitted successfully' });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 
 module.exports = router;

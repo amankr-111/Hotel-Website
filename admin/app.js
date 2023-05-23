@@ -24,9 +24,9 @@ app.use(cookieParser());
     app.get('/about', (req, res) => {
         res.send("hello about") 
     }) 
-    app.get('/support', (req, res) => {
-        res.send("hello support")
-    })
+    // app.get('/support', (req, res) => {
+    //     res.send("hello about") 
+    // }) 
     app.listen(PORT ,()=>{
         console.log("listening At " + PORT)
     })
