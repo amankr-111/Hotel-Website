@@ -18,6 +18,14 @@ const roomsInfo= new mongoose.Schema({
     price:{
         type:String,
         required:true,
+    },
+    img:{
+        type:String,
+        required:true,
+    },
+    noRooms:{
+        type:String,
+        required:true,
     }
 })
 const Rooms = mongoose.model("ROOMINFO", roomsInfo)

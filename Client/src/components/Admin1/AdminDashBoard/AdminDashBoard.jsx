@@ -9,6 +9,8 @@ const AdminDashBoard = () => {
     dec:"",
     loc:"",
     price:"",
+    img:"",
+    noRooms:""
   })
   let name, value;
   const handleInputs=(e)=>{
@@ -18,14 +20,14 @@ const AdminDashBoard = () => {
   }
 const sendData= async(e)=>{
   e.preventDefault()
-  const {hname, dec, loc, price}= home
+  const {hname, dec, loc, price,img, noRooms}= home
   const res= await fetch("/admindashboard", {
     method: "POST",
     headers:{
       "Content-Type":"application/json"
     },
     body:JSON.stringify({
-      hname, dec, loc, price
+      hname, dec, loc, price, img, noRooms
     })
   });
   const val = await res.json()
@@ -35,7 +37,6 @@ const sendData= async(e)=>{
   }
   else{
     window.alert("Data uploded successful")
-    Navigate('/');
 }
 }
   return (
@@ -50,6 +51,10 @@ const sendData= async(e)=>{
         <input type="text" name='dec' className="inp1"value={home.dec} onChange={handleInputs} placeholder="Discription" required />
         <lable className="para1">Location</lable>
         <input type="text" name='loc' className="inp1" value={home.loc}  onChange={handleInputs} placeholder="location" required />
+        <lable className="para1">Image URL</lable>
+        <input type="text" name='img' className="inp1" value={home.img}  onChange={handleInputs} placeholder="Image" required />
+        <lable className="para1">Number Of Rooms</lable>
+        <input type="text" name='noRooms' className="inp1" value={home.noRooms}  onChange={handleInputs} placeholder="Number of Rooms" required />
         <lable className="para1">Amount:</lable>
         <input type="number" name='price' className="inp1" value={home.price} onChange={handleInputs} placeholder="amount" required />
         <br />

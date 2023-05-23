@@ -20,14 +20,14 @@ router.get('/', (req, res) => {
 
 // Admin Dashboard
 router.post('/admindashboard', async (req, res) => {
-  const { hname, dec, loc, price } = req.body;
+  const { hname, dec, loc, price, img, noRooms } = req.body;
 
-  if (!hname || !dec || !loc || !price) {
+  if (!hname || !dec || !loc || !price || !img || !noRooms) {
     return res.status(422).json({ error: 'Please fill the details properly' });
   }
 
   try {
-    const room = new roomsInfo({ hname, dec, loc, price });
+    const room = new roomsInfo({ hname, dec, loc, price, img,noRooms });
     const roomRegister = await room.save();
     console.log(room + 'successfully registered');
     res.status(200).json({ message: 'Room registered successfully' });
@@ -112,9 +112,9 @@ router.get('/payment', authondicate, (req, res) => {
 });
 
 // creating support database
-    router.get('/support', async (req, res) => {
+    router.post('/support', async (req, res) => {
   const { fname, lname, comment } = req.body;
-  if (!fname || !lname || !comment) {
+  if (!fname || !lname || !comment ) {
     return res.status(500).json({ message: 'Please fill the form' });
   }
   try {
@@ -124,6 +124,13 @@ router.get('/payment', authondicate, (req, res) => {
   } catch (err) {
     console.log(err);
   }
+});
+
+// creating logout backend here
+
+router.get('/logout', (req, res) => {
+  res.clearCookie("cootoken", {path:"/"});
+  res.status(200).send("user has logged out succesfully")
 });
 
 

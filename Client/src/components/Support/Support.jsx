@@ -10,23 +10,27 @@ const Support = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-     const res= await fetch("/login", {
+     const res= await fetch("/support", {
       method: "POST",
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({
-        firstName, lastName, comment
+      body: JSON.stringify({
+        fname: firstName,
+        lname: lastName,
+        comment: comment
       })
      });
      const data = await res.json()
-     if(res.status===422 || !data)
+     if(res.status===500 || !data)
      {
       window.alert("Enter data properly!")
      }
      else{
        window.alert("Your FeedBack Submited successful")
-       console.log("registration suq")
+       setFirstName("")
+       setLastName("")
+       setComment("")
      }
   };
 
@@ -36,15 +40,15 @@ const Support = () => {
       <form method='POST'>
         <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
-          <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <input type="text" id="firstName" name='fname' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
         <div className="form-group">
           <label htmlFor="lastName">Last Name:</label>
-          <input type="text" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          <input type="text" id="lastName" name='lname' value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
         <div className="form-group">
           <label htmlFor="comment">Comment:</label>
-          <textarea id="comment" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
+          <textarea id="comment" name='comment' value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
         </div>
         <button type="submit" onClick={handleSubmit}>Submit</button>
       </form>

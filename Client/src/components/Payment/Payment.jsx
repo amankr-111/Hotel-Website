@@ -22,7 +22,6 @@ function Payment() {
       })
 
       const data= await res.json()
-      console.log("I am the second Cookie")
       if(!res.status === 200)
       {
         const error= new Error(res.error)

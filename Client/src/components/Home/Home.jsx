@@ -5,7 +5,7 @@ import Card from "../cards/Card"
 import HomeRight from "./homeright/HomeRight"
 import Footer from '../Footer/Footer';
 import img3 from './four.jpg';
-import data from '../Data/data';
+// import data from '../Data/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
@@ -20,10 +20,12 @@ const Home = () => {
 
   // fetaching the data  from the dataBase
 
+  // let data
+
   useEffect(()=>{
     const fetachData= async()=>{
-      const data = await axios.get("/admindashboard")
-      console.log(data)
+     const  data = await axios.get("/admindashboard")
+     setCardData(data.data)
     }
     fetachData()
   },[])
@@ -70,14 +72,15 @@ const Home = () => {
           onMouseOver={handleMouseOver}
           onMouseLeave={handleMouseLeave}
         >
-          {Object.values(data).map((hotel, index) => (
+          {Object.values(cardData).map((hotel, index) => (
             <Card from={from} to={to} key={index} data={hotel} />
             ))}
-            {/* {
-                cardData && cardData.data.map((cardData)=>{
-                  <Card from={from} to={to}data={cardData} />
-                })
-            } */}
+            {
+  // cardData && cardData.map((cardData) => (
+  //   <Card from={from} to={to} data={cardData} key={cardData.id} />
+  // ))
+}
+
         </div>
         <div className="right1">
           {isHovering && <HomeRight />}

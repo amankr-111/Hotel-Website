@@ -3,29 +3,27 @@ import "./card.css"
 import Checkout from "./Checkout/Checkout";
 import { useState } from "react";
 import ShowImg from "./ShowImg/ShowImg";
+import hotel from "./hotel.jpg"
 
 const Card = ({from, to, data}) => {
   const [isOpen , setIsOpen]=useState(false);
   const [imgIsOpen , setImgIsOpen]=useState(false);
   const cardData = {
-    name: data.name,
-    des: data.des,
+    name: data.hname,
+    des: data.dec,
     loc: data.loc,
     price: data.price,
-    room:data.rooms,
-    roomImg:data.roomImg
+    room:data.noRooms,
+    roomImg :data.img
   };
   return (
     <div className="card1" style={{ height: "40vh", width: "170vh" }}>
       <div  className="cardImg1" >
-      {Object.values(data).map((hotel, index) => (
-        <ShowImg key={index} data={hotel} />
-        ))}
-        <img className='boxImg1' onClick={()=>{setImgIsOpen(true)}} src={data.roomImg} height="200" style={{maxWidth:"300px", borderRadius:"10px", cursor:"pointer"}}  alt="..."/>
+        <img className='boxImg1' onClick={()=>{setImgIsOpen(true)}} src={data.img} height="200" style={{maxWidth:"300px", borderRadius:"10px", cursor:"pointer"}}  alt="anable to get"/>
 </div>
 
       <div className="content1">
-        <h1 style={{fontFamily:"cursive"}}>{data.name}</h1>
+        <h1 style={{fontFamily:"cursive"}}>{data.hname}</h1>
         <h2>{data.des}</h2>
         <h3>{data.loc}</h3>
        <div className="bottom">

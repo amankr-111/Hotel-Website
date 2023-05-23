@@ -20,6 +20,9 @@ function Navbar(props) {
   const handleClick = (e) => {
     setActive(e.target.id);
   };
+ const handleLogout=()=>{
+
+ }
 
   return (
     <nav className="navbar1">
@@ -71,11 +74,22 @@ function Navbar(props) {
             <NavLink
               to="/portel"
               id="login"
-              onClick={handleClick}
+              onClick={handleLogout}
               activeClassName="active"
               exact
             >
               Login
+            </NavLink>
+              </li>
+            <li className={`nav-item1`}>
+            <NavLink
+              to="/logout"
+              id="logout"
+              onClick={handleLogout}
+              activeClassName="active"
+              exact
+            >
+              Logout
             </NavLink>
           </li>
         </ul>

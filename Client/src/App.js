@@ -12,6 +12,7 @@ import Login1 from './components/Login/Login1';
 import Portel from './components/portel/Portel';
 import Admin1 from './components/Admin1/Admin1';
 import AdminDashBoard from './components/Admin1/AdminDashBoard/AdminDashBoard';
+import Logout from './components/Logout/Logout';
 function App() {
   const location = useLocation();
   const [theme, setTheme] = useState('light');
@@ -32,6 +33,7 @@ function App() {
       <Route path='/portel' element={<Portel/>} />
       <Route path='/adminLogin' element={<Admin1/>} />
       <Route path='/adminDashBoard' element={<AdminDashBoard/>} />
+      <Route path='/logout' element={<Logout/>} />
       <Route path='*' element={<Error/>}/>
       
     </Routes>
