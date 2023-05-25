@@ -15,7 +15,6 @@ const authondicate= async ( req, res, next)=>{
             req.token=cootoken;
             req.rootUser=rootUser;
             req.userID= rootUser._id;
-
             next();
     }catch(err){
 

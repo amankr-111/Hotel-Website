@@ -36,7 +36,7 @@ router.post('/admindashboard', async (req, res) => {
     res.status(500).send(err);
   }
 });
-        // sending the data to the dataBase
+// getting the cards data from the dataBase
 router.get('/admindashboard', (req, res) => {
   roomsInfo.find()
     .then((data) => {
@@ -131,6 +131,19 @@ router.get('/payment', authondicate, (req, res) => {
 router.get('/logout', (req, res) => {
   res.clearCookie("cootoken", {path:"/"});
   res.status(200).send("user has logged out succesfully")
+});
+
+
+// getting the Feedback data from the dataBase
+
+router.get('/support', (req, res) => {
+  feedback.find()
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
 });
 
 
