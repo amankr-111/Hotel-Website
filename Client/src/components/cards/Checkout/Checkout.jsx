@@ -3,19 +3,22 @@ import React from "react";
 import "./checkout.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Booked from "../../Booked/Booked";
 
 const Checkout = ({from, to ,data, onClose, open}) => {
   const [roomCount, setRoomCount] = useState(1);
   function handleAddRoom() {
-    if(roomCount < data.room)
-    setRoomCount(roomCount + 1);
+    if (roomCount < data.room) {
+      setRoomCount(roomCount + 1);
+    }
   }
-
+  
   function handleSubtractRoom() {
     if (roomCount > 1) {
       setRoomCount(roomCount - 1);
     }
   }
+  
  
   if (!open) return null; 
   return ReactDOM.createPortal(
@@ -40,7 +43,6 @@ const Checkout = ({from, to ,data, onClose, open}) => {
     </div>
     <Link to={{
   pathname: '/payment',
-  state: { dataCard: data, roomCount: roomCount }
 }} >
   <button type="button" onClick={onClose} class="btn btn-outline-warning">Continue</button>
 </Link>
@@ -60,6 +62,7 @@ const Checkout = ({from, to ,data, onClose, open}) => {
       </div>
        </div>
       </div>
+      <Booked name={data.name}/>
     </>,
     document.getElementById("portal")
   );

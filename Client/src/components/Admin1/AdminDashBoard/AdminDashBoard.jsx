@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './admindashboard.css';
 import { useNavigate } from 'react-router-dom';
+import Feedback from './feedbackCard/Feedback';
+import axios from 'axios';
 
 const AdminDashBoard = () => {
-  const Navigate = useNavigate(); 
-   const [home, setHome]=useState({
-    hname:"",
-    dec:"",
-    loc:"",
-    price:"",
-    img:"",
-    noRooms:""
-  })
-  let name, value;
+  const [feedback, setFeedback] = useState([]);
+  const [home, setHome]=useState({
+       hname:"",
+       dec:"",
+       loc:"",
+       price:"",
+       img:"",
+       noRooms:""
+     })
+      let name, value;
   const handleInputs=(e)=>{
     name= e.target.name;
     value= e.target.value
@@ -37,9 +39,34 @@ const sendData= async(e)=>{
   }
   else{
     window.alert("Data uploded successful")
+    setHome({
+      hname:"",
+      dec:"",
+      loc:"",
+      price:"",
+      img:"",
+      noRooms:""
+    })
+  }
 }
-}
-  return (
+  //fetaching the feedbacks
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('/support');
+     setFeedback(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  fetchData();
+}, []);
+
+
+return (
+  <>
+  <h1 style={{marginLeft:"28%", marginTop:"5vh", fontFamily:"cursive", fontWeight:"600"}}>WELCOME TO ADMIN PORTAL</h1>
     <div className="box1">
       <div className="header1">
         <h1 className="title1">Enter Room Details</h1>
@@ -62,6 +89,13 @@ const sendData= async(e)=>{
         <button onClick={sendData} className="boxBtn1">Submit</button>
       </form>
     </div>
+    <h1 style={{marginLeft:"40%", marginTop:"15vh",fontSize:"4rem" ,fontWeight:"600" ,fontFamily:"curcive"}}>FeedBacks</h1>
+    <div className="feedback-container">
+  {Object.values(feedback).map((detail, index) => (
+    <Feedback key={index} data={detail} />
+  ))}
+</div>
+  </>
   );
 };
 

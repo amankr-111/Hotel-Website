@@ -20,8 +20,6 @@ const Home = () => {
 
   // fetaching the data  from the dataBase
 
-  // let data
-
   useEffect(()=>{
     const fetachData= async()=>{
      const  data = await axios.get("/admindashboard")
@@ -46,9 +44,13 @@ const Home = () => {
     const value = e.target.value;
     setTo(value);
   };
-  const handleClick=()=>{
-    const search= document.querySelector('.searchme').value
-  }
+  const handleClick = () => {
+    const searchValue = document.querySelector('.searchme').value;
+  
+    const filteredData = cardData.filter(data => data.loc === searchValue);
+    setCardData(filteredData);
+  };
+  
 
   return (
     <div className='main1'>
@@ -76,11 +78,7 @@ const Home = () => {
             <Card from={from} to={to} key={index} data={hotel} />
             ))}
             {
-  // cardData && cardData.map((cardData) => (
-  //   <Card from={from} to={to} data={cardData} key={cardData.id} />
-  // ))
 }
-
         </div>
         <div className="right1">
           {isHovering && <HomeRight />}

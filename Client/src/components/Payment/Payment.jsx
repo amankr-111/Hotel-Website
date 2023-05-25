@@ -41,7 +41,10 @@ function Payment() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    event.preventDefault();
     alert("Your payment was successful");
+    nagivate('/booked')
+
   }
  
   return (

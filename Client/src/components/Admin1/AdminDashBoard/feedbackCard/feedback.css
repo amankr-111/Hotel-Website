@@ -1,0 +1,10 @@
+.feedData{
+    margin: 5vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.3s ease;
+}
+.feedData:hover{
+    transform: scale(1.05);
+}

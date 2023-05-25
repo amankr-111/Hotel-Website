@@ -3,8 +3,10 @@ import './portel.css'
 import user from './user.png'
 import admin from './admin.png'
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 const Portel = () => {
   return (
+    <>
         <div className="box">
             <h1 style={{fontSize:"3rem", fontWeight:1000}}>Who are you</h1>
       <div className='index'>
@@ -22,6 +24,8 @@ const Portel = () => {
         </div>
       </div>
  </div>
+      <Footer/>
+      </>
 
   )
 }
