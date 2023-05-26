@@ -17,16 +17,9 @@ app.use(cookieParser());
 
     const PORT=process.env.PORT
 
-
-    // app.get('/payment', (req, res) => {
-    //     res.send("we are at payment")
-    // })
     app.get('/about', (req, res) => {
         res.send("hello about") 
     }) 
-    // app.get('/support', (req, res) => {
-    //     res.send("hello about") 
-    // }) 
     app.listen(PORT ,()=>{
         console.log("listening At " + PORT)
     })
