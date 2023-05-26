@@ -12,5 +12,16 @@
     margin-left: 20vh;
     font-family: cursive;
     font-weight: 700;
-    
 }
+@media (max-width: 830px) {
+    .right {
+      margin: 0.3rem 2rem;
+      width: 100vw;
+      margin-left: 4px;
+    }
+    
+    .h {
+      margin-top: 5vh;
+      margin-left: 5vh;
+    }
+  }

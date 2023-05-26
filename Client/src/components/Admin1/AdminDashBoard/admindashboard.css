@@ -49,5 +49,29 @@
     display: flex;
     flex-wrap: wrap;
   }
+  @media (max-width: 830px) {
+    .box1 {
+      height: 60vh;
+      width: 90vw;
+      margin: 2vh auto;
+    }
+  
+    .header1 {
+      margin-bottom: 5px;
+    }
+  
+    .title1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  
+    .inp1 {
+      margin-bottom: 5px;
+    }
+  
+    .boxBtn1 {
+      margin-bottom: 10px;
+    }
+  }
   
   

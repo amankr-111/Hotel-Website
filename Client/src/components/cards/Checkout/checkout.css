@@ -96,27 +96,6 @@
     font-weight: 500;
     color: rgb(156, 156, 77);
 }
-/* .rooms{
-    margin-top: 4vh;
-margin-bottom: 7vh;
-height: 50px;
-width: 190px;
-background-color: rgba(224, 238, 166, 0.804);
-color: black;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-radius: 10px;
-border: none;
-}
-.add, .sub{
-    height: 100%;
-    width: 40px;
-    background-color: rgb(103, 103, 8);
-    border: none;
-    border-radius: 10px;
-
-} */
 .rooms {
     display: flex;
     align-items: center;
@@ -150,4 +129,22 @@ border: none;
     opacity: 0.5;
     cursor: not-allowed;
   }
-  
+  @media screen and (max-width: 830px) {
+    .check{
+      height: 90%;
+      width: 80%;
+      margin-right: 20px;
+      padding: 25px;
+    }
+    .pay{
+      margin-left: 40px;
+      font-size: 1rem;
+     margin-left: 30px;
+     
+    }
+    .pay1 ,h3{
+      font-size:0.2rem;
+     margin-right: 10px; 
+    }
+
+  }

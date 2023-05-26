@@ -28,13 +28,13 @@ function Navbar(props) {
     <nav className="navbar1">
       <div className="navbar-container1">
         <NavLink to="/" className="logo1" activeClassName="">
-          <img src={img1} height={80} alt="Book My Room logo" />
+          <img className='qq' src={img1} height={80} alt="Book My Room logo" />
         </NavLink>
-        <h1 style={{fontWeight:"900", fontFamily:"cursive", fontStyle: "italic"}}>Book My Room</h1>
+        <h1 className='pp' style={{fontWeight:"900", fontFamily:"cursive", fontStyle: "italic"}}>Book My Room</h1>
         <ul className="nav-menu1">
           <li>
             <button className='togle' onClick={handlechange}>
-              <img src={mode} height={40}/>
+              <img className='zz' src={mode} height={40}/>
             </button>
           </li>
           <li className={`nav-item1`}>

@@ -49,4 +49,9 @@
   button[type='submit']:hover {
     background-color: #45a049;
   }
-  
+  @media (max-width: 830px) {
+    .feedback {
+      margin-top: 10px;
+      
+    }
+  }

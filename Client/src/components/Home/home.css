@@ -63,4 +63,39 @@
         border-radius: 20px;
         width: 60px;
   }
-  
+  @media screen and (max-width: 500px) {
+    .slider {
+        width: 100%;
+        
+    }
+    .main1{
+        height: auto;
+        width: auto;
+        margin-right: 20px;
+    }
+    .head1 {
+        left: 10vh;
+    }
+    .search1 {
+       height:300px;
+        width: 30vh;
+      margin-left: 80px;  
+        display: grid;
+       padding: 40px;
+       top: 40vh;
+       
+    }
+    .submit{
+        margin-left: 10px;
+        
+    }
+
+    .search1 input {
+        width: 10vh;
+    }
+
+    .right1 {
+        margin-right: 5vh;
+    }
+
+}

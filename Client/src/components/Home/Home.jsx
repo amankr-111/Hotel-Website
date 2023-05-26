@@ -60,7 +60,7 @@ const Home = () => {
       <h1 className='head1' style={{color:'black'}}>Hey Where are you Going!<br/>Today</h1>
       <div className="search1">
         <label htmlFor="search" id='searcher'>Search</label>
-        <input type="text" className='searchme' />
+        <input type="text" placeholder='Enter City' className='searchme' />
         <label name="from" htmlFor="fromDate" id='from'>From</label>
         <input type="date" onChange={handleChangeFrom}  id='fromInput' />
         <label htmlFor="toDdate" id='to'>To</label>

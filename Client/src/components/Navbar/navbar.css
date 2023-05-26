@@ -82,44 +82,37 @@
   .togle:hover {
     transform: scale(1.75);
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 500px) {
+  
     .navbar-container1 {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: initial;
+      align-items: center;
+      justify-content: center;
+      height: auto;
     }
   
     .nav-menu1 {
+      margin-right: 0;
       margin-top: 1rem;
     }
   
     .nav-item1 {
       margin-right: 0;
       margin-bottom: 0.5rem;
+      font-size: 15px;
     }
-  
-    .nav-item1:last-child {
-      margin-bottom: 0;
-    }
-  
-    .nav-item1 a {
+    .pp{
+      font-size: 1.0rem;
       display: block;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      background-color: #f0f0f0;
-      color: #333;
-      transition: all 0.3s ease;
     }
-  
-    .nav-item1 a:hover {
-      background-color: #e0e0e0;
-
+    .qq{
+      height: 20px;
     }
-  
-    .active {
-      border-bottom: none;
+    .zz{
+      height: 20px;
+      width: 20px;
+      margin-top: 10px;
       
     }
+    
   }
-
-
-

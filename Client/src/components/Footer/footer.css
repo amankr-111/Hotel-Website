@@ -25,3 +25,16 @@
     margin-top: 5vh;
     width: 20%;
 }
+@media screen and (max-width: 830px) {
+    .cont {
+      flex-direction: column;
+      height: auto;
+      width: auto;
+    }
+    .fst,
+    .snd,
+    .trd {
+      width: 100%;
+      margin: 0;
+    }
+  }

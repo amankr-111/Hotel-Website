@@ -22,3 +22,12 @@
     background-color: rgba(0, 0, 0, 0.616);
     z-index: 1000;
 }
+@media (max-width: 830px) {
+    .show {
+        height: 60px;
+        width: 290px;
+       justify-content:center;
+      
+    }
+
+}
