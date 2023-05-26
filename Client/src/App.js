@@ -23,7 +23,11 @@ function App() {
   };
   return (
     <div className={`App ${theme}`}>
+
+      {/* removing the navbar from the payment page */}
     {location.pathname !== '/payment' &&  <Navbar toggleTheme={toggleTheme} />}
+
+    {/* my all routes */}
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

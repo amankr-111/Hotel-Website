@@ -1,4 +1,4 @@
-/* Default styles */
+
 .navbar1 {
     position: sticky;
     top: 0;
@@ -82,7 +82,6 @@
   .togle:hover {
     transform: scale(1.75);
   }
-  /* Media queries for responsive styles */
   @media screen and (max-width: 768px) {
     .navbar-container1 {
       flex-direction: column;
