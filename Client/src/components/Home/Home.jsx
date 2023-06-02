@@ -75,7 +75,8 @@ const Home = () => {
           onMouseLeave={handleMouseLeave}
         >
           {Object.values(cardData).map((hotel, index) => (
-            <Card from={from} to={to} key={index} data={hotel} />
+              <Card from={from} to={to} key={index} data={hotel} />
+
             ))}
             {
 }

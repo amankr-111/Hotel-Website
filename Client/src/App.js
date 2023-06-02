@@ -14,6 +14,8 @@ import Admin1 from './components/Admin1/Admin1';
 import AdminDashBoard from './components/Admin1/AdminDashBoard/AdminDashBoard';
 import Logout from './components/Logout/Logout';
 import Booked from './components/Booked/Booked';
+import Success from './components/final/Success';
+import Cancel from './components/final/Cancel';
 function App() {
   const location = useLocation();
   const [theme, setTheme] = useState('light');
@@ -40,6 +42,8 @@ function App() {
       <Route path='/adminDashBoard' element={<AdminDashBoard/>} />
       <Route path='/logout' element={<Logout/>} />
       <Route path='/booked' element={<Booked/>}/>
+      <Route path='/success' element={<Success/>}/>
+      <Route path='/cancel' element={<Cancel/>}/>
       <Route path='*' element={<Error/>}/>
       
     </Routes>

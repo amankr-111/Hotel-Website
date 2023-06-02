@@ -20,8 +20,10 @@ const Admin = () => {
     <form className='adminform'>
         <h1 className='login'>LOGIN</h1>
         <label className='loginLable'>Email</label>
+        <br />
         <input className='loginName' id='adminEmail' placeholder='Email' type="username" required/>
         <label className='loginLable'>Password</label>
+        <br />
         <input className='loginName' id='adminPass' placeholder='Password' type="password" required/>
         <button className='loginBtn' onClick={handleClick}>SUBMIT</button>
        <br/>

@@ -63,7 +63,7 @@
         border-radius: 20px;
         width: 60px;
   }
-  @media screen and (max-width: 500px) {
+  @media all and (max-width: 500px) {
     .slider {
         width: 100%;
         

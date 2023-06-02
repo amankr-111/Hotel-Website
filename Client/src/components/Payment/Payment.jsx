@@ -39,40 +39,43 @@ function Payment() {
        callPaymentPage();
     },[])
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    event.preventDefault();
-    alert("Your payment was successful");
-    nagivate('/booked')
-
+  const iamClick =()=>{
+    fetch("/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: [
+          { id: 1, quantity: 2 },
+          { id: 2, quantity: 1 },
+        ],
+      }),
+    }).then(res => {
+        if (res.ok) return res.json()
+        return res.json().then(json => Promise.reject(json))
+      })
+      .then(({ url }) => {
+        console.log(url)
+        window.location = url
+      })
+      .catch(e => {
+        console.error(e.error)
+      })
   }
+  
+  setTimeout(()=>{
+    iamClick()
+  },2500)
  
   return (
     <header>
       <div className="container1">
-        <div className="pay1">
-          <form method="GET" onSubmit={handleSubmit}>
-            <h3 className="head" style={{font:"3rem curcive 1000"}}>Payments</h3>
-            <label className="labe1">
-              Accepted card
-              <img style={{marginLeft:"20px"}} src={card1} width="170" alt="card img" />
-            </label>
-            <input className="cardDetails" type="text" placeholder="Name on Card*" />
-            <input className="cardDetails" type="text" placeholder="Card Number*" />
-            <input className="cardDetails" type="text" placeholder="Expiry Date*" />
-            <input className="cardDetails" type="text" placeholder="Security Code*" />
-            <button type="submit">
-              <img
-                src={card2}
-                height="20px"
-                alt="Lock icon"
-                onSubmit={handleSubmit}
-              />
-              Pay Now
-            </button>
-          </form>
+          <h3>
+            We are Fteaching resorces do not refresh the page 
+          </h3>
+          <h4>Please wait</h4>
         </div>
-      </div>
     </header>
   );
 }
